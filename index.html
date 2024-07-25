@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Step Modal Upload with Image</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Trigger Button -->
+    <button id="openModal" class="modal-trigger">Upload Image</button>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <div id="step1" class="step">
+                <div class="content-center">
+                    <h2>Step 1: 긴 사진 파일을 올려주세요.</h2>
+                    <input type="file" id="imageFile" accept="image/*">
+                    <img id="imagePreview" src="#" alt="Image Preview" style="display: none; width: 100%;"/>
+                </div>
+                <button id="toStep2" class="modal-button center-button">다음</button>
+            </div>
+            <div id="step2" class="step">
+                <h2>Step 2: 제목, 설명, 태그 추가</h2><br>
+                <div class="step2-content">
+                    <img id="imagePreviewStep2" src="#" alt="Image Preview" style="width: 50%;"/>
+                    <div class="description-tags">
+                        <h3>제목</h3>
+                        <textarea id="title" placeholder="Enter title" class="modal-textarea"></textarea>
+                        <h3>설명</h3>
+                        <textarea id="description" placeholder="Enter description" class="modal-textarea"></textarea>
+                        <h3>태그</h3>
+                        <textarea id="tags" placeholder="Enter tags" class="modal-textarea"></textarea>
+                    </div>
+                </div>
+                <button id="backToStep1" class="modal-button center-button">이전</button>
+                <button id="submit" class="modal-button center-button">업로드</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
